@@ -22,6 +22,118 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+		      /* * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        } */
+
+        .unique-card-wrapper {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            perspective: 1000px;
+        }
+
+        .unique-flip-card {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .unique-card-wrapper:hover .unique-flip-card {
+            transform: rotateY(180deg);
+        }
+
+        .unique-flip-card .unique-front, .unique-flip-card .unique-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        .unique-front {
+            background: #ffbd39;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .unique-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .unique-back {
+            background: #ffbd39;
+            color: white;
+            transform: rotateY(180deg);
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .unique-back a {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: white;
+            color: #ffbd39;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .unique-back a:hover {
+            background: #ffbd39;
+            color: white;
+        }
+
+        @keyframes slideInUnique {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .unique-info-box {
+            position: absolute;
+            left: 320px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #34495e;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            animation: slideInUnique 0.8s ease-in-out;
+        }
+	</style>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
@@ -351,8 +463,8 @@
             <p>Developer of Local Service Hub, a platform connecting users with trusted local service providers through seamless booking, verified reviews, and secure transactions.</p>
           </div>
         </div>
-    		<div class="row">
-    			<div class="col-md-4">
+    		<div class="row" style="margin: 30px;">
+    			<!-- <div class="col-md-4">
     				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/p1.png);">
     					<div class="overlay"></div>
 	    				<div class="text text-center p-4">
@@ -360,8 +472,8 @@
 	    					<span>Web Design</span>
 	    				</div>
     				</div>
-  				</div>
-  				<div class="col-md-8">
+  				</div> -->
+  				<!-- <div class="col-md-8">
     				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/p2.png);">
     					<div class="overlay"></div>
 	    				<div class="text text-center p-4">
@@ -409,7 +521,66 @@
 		    				</div>
 	    				</div>
     				</div>
-    			</div>
+    			</div> -->
+
+
+				<div class="unique-card-wrapper" style="margin:auto; margin-top: 25px;">
+					<div class="unique-flip-card">
+						<div class="unique-front">
+							<img src="./images/krishimitra ai.png" alt="Card Image">
+						</div>
+						<div class="unique-back">
+							<p>More Info about this Card.</p>
+							<a href="#">Learn More</a>
+						</div>
+					</div>
+				</div>
+				<div class="unique-card-wrapper" style="margin:auto; margin-top: 25px;">
+					<div class="unique-flip-card">
+						<div class="unique-front">
+							<img src="./images/krishimitra.png" alt="Card Image">
+						</div>
+						<div class="unique-back">
+							<p>More Info about this Card.</p>
+							<a href="#">Learn More</a>
+						</div>
+					</div>
+				</div>
+				<div class="unique-card-wrapper" style="margin:auto; margin-top: 25px;">
+					<div class="unique-flip-card">
+						<div class="unique-front">
+							<img src="https://via.placeholder.com/300x400" alt="Card Image">
+						</div>
+						<div class="unique-back">
+							<p>More Info about this Card.</p>
+							<a href="#">Learn More</a>
+						</div>
+					</div>
+				</div>
+				<div class="unique-card-wrapper" style="margin:auto; margin-top: 25px;">
+					<div class="unique-flip-card">
+						<div class="unique-front">
+							<img src="https://via.placeholder.com/300x400" alt="Card Image">
+						</div>
+						<div class="unique-back">
+							<p>More Info about this Card.</p>
+							<a href="#">Learn More</a>
+						</div>
+					</div>
+				</div>
+				<div class="unique-card-wrapper" style="margin:auto; margin-top: 25px;">
+					<div class="unique-flip-card">
+						<div class="unique-front">
+							<img src="https://via.placeholder.com/300x400" alt="Card Image">
+						</div>
+						<div class="unique-back">
+							<p>More Info about this Card.</p>
+							<a href="#">Learn More</a>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="unique-info-box">Extra Information Appears Here</div> -->
+
     		</div>
     	</div>
     </section>
